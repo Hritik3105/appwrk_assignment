@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Transaction Details</title>
+</head>
+<body>
+    <h1>Add Transaction</h1>
+    <form method = "POST">
+        {% csrf_token %}
+        <label for= "amount">Amount</label>
+        <input type= "number" id="amount" name ="amount" required>
+        <br>
+
+        <label for= "amount">Description</label>
+        <input type= "text" id="description" name ="description" required>
+        <br>
+        <select id="tran_type" name="tran_type" required>
+            <option value ="" disabled selected>Transaction type</option>
+            <option value ="debit" >Debit</option>
+            <option value ="credit">Credit</option>
+        </select>
+        <br>
+
+        <button type= "submit">Save</button>
+
+
+</body>
+
